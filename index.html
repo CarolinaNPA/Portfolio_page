@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1f2937',
+                        secondary: '#6366f1',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animaciones personalizadas para hacer la UI única */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out; }
+        .hero-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .project-card:hover { transform: translateY(-10px); transition: transform 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header/Portada -->
+    <header class="hero-bg text-white py-16 px-6 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center animate-fade-in-up">
+            <div class="mb-6">
+                <img src="C:/Users/carod/Downloads/Portafolio/meee.jpg" alt="Retrato profesional de un joven data scientist con expresión confiada, vestimenta casual formal, fondo neutro iluminado en estudio simulado con algoritmos visuales sutiles en el fondo" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-lg" onerror="this.style.display='none';" onload="this.classList.add('animate-fade-in-up');">
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow-lg">
+                Hi, I'm Carolina | Data Scientist
+            </h1>
+            <p class="text-xl md:text-2xl mb-6 opacity-90">
+                Transforming Data in Strategic Decisions with Machine Learning and Deep Learning
+            </p>
+            <p class="text-lg max-w-2xl mx-auto leading-relaxed">
+                Passionate with complex problem solving in data science. Specialist in Python, pandas, numpy, matplotlib, scikit-learn,
+                TensorFlow, pytorch, etc. Currently adding new personal projects to the portfolio.
+                <!-- Apasionado por resolver problemas complejos en la ciencia de datos. Especializado en Python, R, TensorFlow y análisis predictivo. Actualmente incorporando proyectos universitarios y nuevos desarrollos personales al portefeuille. -->
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="#proyectos" class="bg-secondary hover:bg-blue-600 text-white py-3 px-6 rounded-full font-semibold transition-colors">
+                    Projects
+                </a>
+                <a href="https://github.com/CarolinaNPA" class="border-2 border-white hover:bg-white hover:text-indigo-700 text-white py-3 px-6 rounded-full font-semibold transition-colors">
+                    My GitHub
+                </a>
+            </div>
+        </div>
+        <!-- Elementos decorativos para unicidad -->
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="absolute top-10 left-10 w-20 h-20 bg-white rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-16 h-16 bg-secondary rounded-full opacity-30 animate-bounce"></div>
+    </header>
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos" class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
+                My Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto de Universidad 1 -->
+                <!-- <div class="project-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b4e61b10-d3cf-4a07-96ca-eb527bd8bed4.png" alt="Diagrama visual de un modelo de machine learning con nodos conectados representando algoritmos de clasificación y datos de entrada de un proyecto universitario sobre predicción de ventas" class="w-full h-32 object-cover rounded mb-4" onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/486deefd-9bae-46b2-b2da-2f465d010acd.png';">
+                    <h3 class="text-xl font-semibold mb-2">Predicción de Ventas con Regresión Lineal</h3>
+                    <p class="text-gray-600 mb-4">Proyecto universitario: Análisis de datos de ventas para predecir tendencias futuras usando Python y scikit-learn.</p>
+                    <a href="#" class="text-secondary hover:underline">Ver en GitHub</a>
+                </div> -->
+                <!-- Proyecto de Universidad 2
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4d383574-3020-4bb8-b9a1-4c1ab1b3e373.png" alt="Gráfico de barras y líneas en un dashboard interactivo mostrando análisis de big data de sentimientos en redes sociales de un proyecto académico centrado en procesamiento de texto" class="w-full h-32 object-cover rounded mb-4" onerror="this.src='https://placehold.co/400x200/ccc/666?text=Fallback';">
+                    <h3 class="text-xl font-semibold mb-2">Análisis de Sentimientos en Redes Sociales</h3>
+                    <p class="text-gray-600 mb-4">Estudio de uni: Procesamiento de lenguaje natural para clasificar emociones en tweets usando NLP y TensorFlow.</p>
+                    <a href="#" class="text-secondary hover:underline">Ver en GitHub</a>
+                </div> -->
+                <!-- Proyecto Personal 1 -->
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/41bf6798-69a0-4928-8d46-8f2651aab504.png" alt="Interfaz de aplicación web con gráficos de visualización de datos emergentes mostrando insights de análisis de big data en tiempo real, diseñado para dashboard personal de data science" class="w-full h-32 object-cover rounded mb-4" onerror="this.src='https://placehold.co/400x200/ccc/666?text=Fallback';">
+                    <h3 class="text-xl font-semibold mb-2">Binary Classification with a Bank Dataset</h3>
+                    <p class="text-gray-600 mb-4">Personal project: Using a Kaggle competition dataset: predict whether a client will subscribe to a bank term deposit.</p>
+                    <a href="https://github.com/CarolinaNPA/Portfolio_Caro/blob/main/Binary_Classification_Kaggle_Competition/Binary_Clasif.md" class="text-secondary hover:underline">Ver en GitHub</a>
+                </div>
+                <!-- Proyecto Personal 2 -->
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0168c1a2-c92c-4ff3-8054-59164e70c277.png" alt="Representación 3D de un modelo de deep learning con capas neurales animadas y datos fluyendo a través de nodos en un proyecto personal sobre reconocimiento de imágenes" class="w-full h-32 object-cover rounded mb-4" onerror="this.src='https://placehold.co/400x200/ccc/666?text=Fallback';">
+                    <h3 class="text-xl font-semibold mb-2">Image Classification Using Neural Network</h3>
+                    <p class="text-gray-600 mb-4">Academic Project: This project use image about forest and fire forest, the main objective was classify the images using the labels of fire and not fiere using a neural network.</p>
+                    <a href="https://github.com/CarolinaNPA/Portfolio_Caro/blob/main/ImageClasiff_with_RNA/ImageClassif_with_RNA.md" class="text-secondary hover:underline">Ver en GitHub</a>
+                </div>
+                <!-- Más placeholders
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/737e2387-c344-443f-85f4-aedc9594614a.png" alt="Mapa interactivo con puntos de datos geolocalizados y análisis geoespacial para optimización de rutas en un proyecto mixto de universidad y personal" class="w-full h-32 object-cover rounded mb-4" onerror="this.src='https://placehold.co/400x200/ccc/666?text=Fallback';">
+                    <h3 class="text-xl font-semibold mb-2">Optimización de Rutas con Datos Geospaciales</h3>
+                    <p class="text-gray-600 mb-4">Proyecto híbrido: Combinación de algoritmos de universidad con APIs modernas para eficientes deliveries.</p>
+                    <a href="#" class="text-secondary hover:underline">Ver en GitHub</a>
+                </div> -->
+                <div class="project-card bg-gray-50 p-6 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d0d9c21d-5b65-4c07-87aa-e0ecfc486263.png" alt="Grafo de conexiones de redes sociales con análisis de clústeres y predicciones basadas en machine learning para un proyecto personal de data science orientado a la red" class="w-full h-32 object-cover rounded mb-4" onerror="this.src='https://placehold.co/400x200/ccc/666?text=Fallback';">
+                    <h3 class="text-xl font-semibold mb-2">Multimodal Emotion Analysis in Older Adults</h3>
+                    <p class="text-gray-600 mb-4">Graduation project: The objective is to detect and classify emotions such as happiness, anger, disgust, fear, sadness, and surprise in older adult participants, using classical machine learning models and specialized preprocessing techniques.</p>
+                    <a href="https://github.com/CarolinaNPA/Portfolio_Caro/blob/main/Multimodal_Model/Multimodal_SentimentClassif.md" class="text-secondary hover:underline">Ver en GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 px-6 text-center">
+        <p>© 2025 Carolina Alvarez. Contacto: <a href="#" class="underline">alvarezcarolinanaomi@gmail.com</a></p>
+        <div class="mt-4 flex justify-center space-x-6">
+            <a href="https://www.linkedin.com/in/carolinaperaltaalv/" class="hover:text-secondary">LinkedIn</a>
+            <a href="https://github.com/CarolinaNPA" class="hover:text-secondary">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        // JS simple para animciones al scroll
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('header');
+            if (window.scrollY > 100) {
+                hero.style.transform = 'translateY(-10px)';
+            } else {
+                hero.style.transform = 'translateY(0)';
+            }
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
